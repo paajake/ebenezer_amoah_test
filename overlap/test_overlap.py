@@ -19,7 +19,7 @@ class TestOverlap(unittest.TestCase):
         with self.assertRaises(TypeError):
             is_overlapping("text", (12, 21))
         with self.assertRaises(TypeError):
-            is_overlapping((9, 15), ("12", 20))
+            is_overlapping((9, 15), ("12", 21))
 
 
 if __name__ == '__main__':
