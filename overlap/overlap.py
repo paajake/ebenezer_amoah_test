@@ -31,10 +31,8 @@ def is_overlapping(line_1: Tuple[Coordinate, Coordinate],
     False
     """
 
-    """
-    For Lines to overlap, the end point of the line with lower boundary,
-    needs to exceed the start point of the other.
-    """
+    # For Lines to overlap, the end point of the line with lower boundary,
+    # needs to exceed the start point of the other.
 
     lower_bounded_line: Tuple
     higher_bounded_line: Tuple
@@ -50,3 +48,8 @@ def is_overlapping(line_1: Tuple[Coordinate, Coordinate],
         return True
 
     return False
+
+
+if __name__ == "__main__":
+    import doctest
+    print(doctest.testmod())
