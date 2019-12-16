@@ -14,9 +14,12 @@ class TestOverlap(unittest.TestCase):
         self.assertEqual(is_overlapping((-10, 0.0), (0.0, 10)), False)
 
     def test_lines_types(self):
-        with self.assertRaises(TypeError): is_overlapping((9, 15), "overlap")
-        with self.assertRaises(TypeError): is_overlapping("text", (12, 21))
-        with self.assertRaises(TypeError): is_overlapping((9, 15), ("12", 20))
+        with self.assertRaises(TypeError):
+            is_overlapping((9, 15), "overlap")
+        with self.assertRaises(TypeError):
+            is_overlapping("text", (12, 21))
+        with self.assertRaises(TypeError):
+            is_overlapping((9, 15), ("12", 20))
 
 
 if __name__ == '__main__':

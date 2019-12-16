@@ -7,16 +7,19 @@ def is_overlapping(line_1: Tuple[Coordinate, Coordinate],
                    line_2: Tuple[Coordinate, Coordinate]) -> bool:
     """
     A line overlap comparator.
-    This function takes in the start and end coordinates of 2 lines in the x-line plane as tuples, and checks if they
-    overlap.
+    This function takes in the start and end coordinates of 2 lines in the
+    x-line plane as tuples, and checks if they overlap.
 
-    Parameters : 
-    line_1 ( Tuple(int|float, int|float) ): This is a Tuple of 2 numbers representing the 2 x coordinates that form this
-                                            line,assumes the first coordinate is lower than the second.
-    line_2 ( Tuple(int|float, int|float) ): This is a Tuple of 2 numbers representing the 2 x coordinates that form this
-                                            line assumes the first coordinate is lower than the second.
+    Parameters:
+    line_1 ( Tuple(int|float, int|float) ): This is a Tuple of 2 numbers
+    representing the 2 x coordinates that form this line,assumes the first
+    coordinate is lower than the second.
 
-    Returns: 
+    line_2 ( Tuple(int|float, int|float) ): This is a Tuple of 2 numbers
+    representing the 2 x coordinates that form this line assumes the first
+    coordinate is lower than the second.
+
+    Returns:
     bool: Returns True if lines overlap, else it returns False.
 
     Examples:
@@ -28,7 +31,10 @@ def is_overlapping(line_1: Tuple[Coordinate, Coordinate],
     False
     """
 
-    # For Lines to overlap, the end point of the line with lower boundary, needs to exceed the start point of the other.
+    """
+    For Lines to overlap, the end point of the line with lower boundary,
+    needs to exceed the start point of the other.
+    """
 
     lower_bounded_line: Tuple
     higher_bounded_line: Tuple
