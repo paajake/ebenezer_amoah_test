@@ -12,12 +12,13 @@ def compare(version_1: str, version_2: str) -> int:
     Returns:
     int: Returns 1, if version_1 is greater than version_2,
     or returns 0, if version_1 is equal to version_2,
-    else returns -1 if version 1 is less than version_2.
+    or returns -1 if version 1 is less than version_2,
+    else returns 404 if an answer wasn't found.
 
     Examples:
     >>> compare("1.0","0.1")
     1
-    >>> compare("0.1","0.1")
+    >>> compare("0.1","0.1.0")
     0
     >>> compare("1.1","2.0")
     -1
@@ -25,7 +26,7 @@ def compare(version_1: str, version_2: str) -> int:
     version_1 = version_1.strip()
     version_2 = version_2.strip()
 
-    if (version_1 == version_2):
+    if version_1 == version_2:
         return 0
 
     version_1_list = [int(val) for val in version_1.split('.')]
@@ -35,24 +36,26 @@ def compare(version_1: str, version_2: str) -> int:
 
     while i < len(version_1_list) and i < len(version_2_list):
 
-        if (version_1_list[i] > version_2_list[i]):
+        if version_1_list[i] > version_2_list[i]:
             return 1
-        elif (version_2_list[i] > version_1_list[i]):
+        elif version_2_list[i] > version_1_list[i]:
             return -1
 
         i += 1
 
-    if(i < len(version_1_list)):
-        if (sum(version_1_list[i:]) > 0):
+    if i < len(version_1_list):
+        if sum(version_1_list[i:]) > 0:
             return 1
         else:
             return 0
 
-    elif(i < len(version_2_list)):
-        if (sum(version_2_list[i:]) > 0):
+    elif i < len(version_2_list):
+        if sum(version_2_list[i:]) > 0:
             return -1
         else:
             return 0
+
+    return 404
 
 
 if __name__ == "__main__":
