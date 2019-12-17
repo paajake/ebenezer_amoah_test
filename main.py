@@ -99,7 +99,7 @@ def versions_compare(error_count: int):
               + f"Higher than Version 2 of value `{version_2}`\n\n")
 
     if ver_compare == 404:
-        print("There was an ERRORR !!!")
+        print("There was an ERROR !!!")
         return main(1)
 
     return main(0)
