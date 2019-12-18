@@ -19,6 +19,7 @@ class LRUCache:
 
         cache (OrderedDict): This is an OrderedDict object which actually
         holds the data in the LRU Cache object.
+
     Examples:
         >>> my_cache = LRUCache(10, 60*10)
         >>> my_cache.is_expired()
@@ -101,7 +102,7 @@ class LRUCache:
             return True
         return False
 
-    def set_cache_expiry_time(self, exp: int):
+    def set_expiry_time(self, exp: int):
         """
         This function sets a new expiry time for the Cache object
         based on the time given in seconds.
@@ -119,7 +120,7 @@ class LRUCache:
         self.expiry_time = int(time()) + exp
         return None
 
-    def extend_cache_expiry_time(self, exp: int):
+    def extend_expiry_time(self, exp: int):
         """
         This function extends expiry time of the Cache object
         by the time given in seconds.

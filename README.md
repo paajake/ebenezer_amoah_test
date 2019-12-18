@@ -31,3 +31,7 @@ This library will be used extensively by many of our services so it needs to mee
 ### Question A and Question B
 Solution modules to Question A and Question B can be found in `overlap` and `versions_comparison` folders respectively.
 Both can be tested by running the python script `main.py`
+
+### Question C
+Partial Solution to Question C can be found in `lru_cache` folder.
+The geo-distributed part of the question requires further clarification.
